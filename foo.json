@@ -1,0 +1,27 @@
+{
+    "_id": "C4037652224C3E4C3E",
+    "coords": {
+        "lat": -22.0746826,
+        "lon": -48.7421818
+    },
+    "endereco": {
+        "cep": "17250000",
+        "cidade": {
+            "_id": "BARIRI",
+            "nome": "Bariri",
+            "pais": "BR",
+            "uf": "SP"
+        },
+        "numero": "1009",
+        "rua": "R. SETE DE SETEMBRO"
+    },
+    "informacao": {
+        "cat": 44,
+        "razao_social": "Banco Santander Banespa S/A",
+        "slogan": "Bancos                                                                                                                  ",
+        "subcat": 44,
+        "titulo": "Banco Santander Banespa S/A",
+        "titulo_sem_acento": "BANCO SANTANDER BANESPA S A"
+    },
+    "url": "http://www.ilocal.com.br/telas/search-engine/basicainfo/pagina-informacao.aspx?cdlocal=11065&cdacesso=7623011&cdlogr=55047&nulog=1009&cdtit=5754&logo=&buscador=titulo&ordem=3.000"
+}
