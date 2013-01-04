@@ -16,13 +16,18 @@ connMongo = pymongo.Connection('192.168.3.1')
 db = connMongo.apontador
 data = db.pois.find_one()
 string = 'poi/{lbsid}/basicprofile.json.gz'
-f = open('foo.json','w')
-
 
 k.key =string.format(lbsid = data[u'_id'])
+
 zdata = json.dumps(data,sort_keys=True,indent=4, separators=(',', ': '))
+fil = open('tmp.json','wb')
 
 
-f.write(zdata)
-k.set_contents_from_file(zdata)
+zfile = gzip.open('tmp.json.gz','wb')
+
+zfile.write(zdata)
+zfile.close()
+zipfile = open('tmp.json.gz','r')
+k.set_metadata('Content-Encoding','gzip')
+k.set_contents_from_file(zipfile)
 k.make_public()
