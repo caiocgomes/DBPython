@@ -1,3 +1,8 @@
+import pymssql
+
+
+connSQL = pymssql.connect(host='localdb-office.cyvpw3imwgyw.sa-east-1.rds.amazonaws.com',user='usr_dbowner',password='caio0123',database='baselog')
+
 cursor = connSQL.cursor()
 query2 = 'select path from [baselog].[dbo].[baselog] where trackuserid=\'{user}\' and convert(date,createat) = \'{data}\' group by path'
 cursor.execute('select queryinfo,convert(date,createat),couponid from [baselog].[dbo].[couponclickdetail]')
